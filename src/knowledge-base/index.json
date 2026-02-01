@@ -1,0 +1,102 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2026-02-01",
+  "documents": [
+    {
+      "id": "company-overview",
+      "title": "Camaral Company Overview",
+      "category": "company",
+      "tags": ["overview", "features", "benefits", "mission"],
+      "path": "company/overview.md",
+      "priority": 10,
+      "description": "Comprehensive overview of Camaral's platform, mission, and value proposition"
+    },
+    {
+      "id": "company-technology",
+      "title": "Technology Stack",
+      "category": "company",
+      "tags": ["technology", "AI", "infrastructure"],
+      "path": "company/technology.md",
+      "priority": 7
+    },
+    {
+      "id": "product-digital-avatars",
+      "title": "Digital Avatar Technology",
+      "category": "products",
+      "tags": ["avatars", "AI", "NLP", "features"],
+      "path": "products/digital-avatars.md",
+      "priority": 9,
+      "description": "Deep dive into how digital avatars work and their capabilities"
+    },
+    {
+      "id": "product-use-cases",
+      "title": "Use Cases & Applications",
+      "category": "products",
+      "tags": ["sales", "support", "use-cases"],
+      "path": "products/use-cases.md",
+      "priority": 8
+    },
+    {
+      "id": "product-features",
+      "title": "Product Features",
+      "category": "products",
+      "tags": ["features", "capabilities"],
+      "path": "products/features.md",
+      "priority": 8
+    },
+    {
+      "id": "product-integrations",
+      "title": "Integrations",
+      "category": "products",
+      "tags": ["integrations", "CRM", "tools"],
+      "path": "products/integrations.md",
+      "priority": 6
+    },
+    {
+      "id": "faq-technical",
+      "title": "Technical FAQ",
+      "category": "faqs",
+      "tags": ["FAQ", "technical", "implementation"],
+      "path": "faqs/technical.md",
+      "priority": 7
+    },
+    {
+      "id": "faq-pricing",
+      "title": "Pricing & Plans",
+      "category": "faqs",
+      "tags": ["FAQ", "pricing", "plans"],
+      "path": "faqs/pricing.md",
+      "priority": 9
+    },
+    {
+      "id": "faq-implementation",
+      "title": "Implementation Guide",
+      "category": "faqs",
+      "tags": ["FAQ", "implementation", "getting-started"],
+      "path": "faqs/implementation.md",
+      "priority": 8
+    },
+    {
+      "id": "faq-support",
+      "title": "Support & Resources",
+      "category": "faqs",
+      "tags": ["FAQ", "support", "help"],
+      "path": "faqs/support.md",
+      "priority": 6
+    }
+  ],
+  "categories": {
+    "company": {
+      "name": "Company Information",
+      "description": "About Camaral, mission, and technology"
+    },
+    "products": {
+      "name": "Products & Features",
+      "description": "Digital avatars, capabilities, and integrations"
+    },
+    "faqs": {
+      "name": "FAQs & Support",
+      "description": "Common questions and help resources"
+    }
+  }
+}
