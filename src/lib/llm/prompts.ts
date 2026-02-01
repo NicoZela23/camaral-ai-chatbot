@@ -60,13 +60,7 @@ export const FALLBACK_MESSAGE = `
 
 ---
 
-💡 **¿Quieres saber más?** 
-
-Estaré encantado de conectarte con nuestro equipo que puede proporcionar información más detallada adaptada a tus necesidades específicas.
-
-- [Reservar una Demo](https://camaral.com/demo) - Ve nuestros avatares digitales en acción
-- [Contactar Ventas](mailto:sales@camaral.com) - Discute tu caso de uso específico
-- [Documentación](https://docs.camaral.com) - Explora nuestros recursos técnicos`;
+💡 **¿Quieres saber más?**`;
 
 export const OUT_OF_CONTEXT_MESSAGE = `Solo puedo responder preguntas relacionadas con Camaral y nuestra tecnología de avatares digitales.
 
