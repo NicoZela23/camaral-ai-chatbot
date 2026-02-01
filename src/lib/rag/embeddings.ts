@@ -1,19 +1,34 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY!);
-const embeddingModel = genAI.getGenerativeModel({ model: "embedding-001" });
+let genAI: GoogleGenerativeAI | null = null;
+let embeddingModel: ReturnType<GoogleGenerativeAI["getGenerativeModel"]> | null = null;
+
+function getEmbeddingModel() {
+  if (!process.env.GEMINI_API_KEY) {
+    throw new Error("GEMINI_API_KEY is not set in environment variables");
+  }
+
+  if (!genAI) {
+    genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+    embeddingModel = genAI.getGenerativeModel({ model: "embedding-001" });
+  }
+
+  return embeddingModel!;
+}
 
 export async function generateEmbedding(text: string): Promise<number[]> {
   if (!process.env.GEMINI_API_KEY) {
     throw new Error("GEMINI_API_KEY is not set in environment variables");
   }
 
+  const model = getEmbeddingModel();
+
   if (!text || text.trim().length === 0) {
     throw new Error("Text cannot be empty");
   }
 
   try {
-    const result = await embeddingModel.embedContent(text);
+    const result = await model.embedContent(text);
 
     let embedding: number[];
     if (result.embedding?.values) {
@@ -38,7 +53,8 @@ export async function generateEmbedding(text: string): Promise<number[]> {
       const errorObj = error as Error & { status?: number };
       if (errorObj.status === 400 && error.message?.includes("API key")) {
         throw new Error(
-          "Invalid GEMINI_API_KEY. Please check your API key in .env.local file. " 
+          "Invalid GEMINI_API_KEY. Please check your API key in .env.local or .env file. " +
+            "Get a valid key from: https://makersuite.google.com/app/apikey"
         );
       }
       throw new Error(`Failed to generate embedding: ${error.message || "Unknown error"}`);

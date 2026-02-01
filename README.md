@@ -23,7 +23,7 @@ Un chatbot de IA de calidad empresarial que educa a los prospectos sobre la tecn
 - npm
 - Clave API de Google Gemini
 
-## 🛠️ Instalación
+## Instalación
 
 1. **Clonar el repositorio**
 
